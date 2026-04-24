@@ -8,6 +8,12 @@ import { getDiscountedPrice } from '../const/format';
 export const useCart = () =>
   useSelector((state) => state.cart);
 
+/**
+ * Выполняет reduce по корзине и возвращает вычисленное значение.
+ * @param {Function} callback - Функция аккумулятора для элементов корзины.
+ * @param {*} [defaultValue=0] - Начальное значение аккумулятора.
+ * @returns {*}
+ */
 const useCartReducer = (callback, defaultValue = 0) =>
   useSelector((state) => state.cart.reduce(callback, defaultValue));
 
