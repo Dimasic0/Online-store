@@ -104,7 +104,10 @@ export default function CartPage() {
           </table>
         </div>
         <footer className="cart__footer">
-          <section className="cart__promo" aria-label="Промокод">
+          <section className="cart__promo" aria-labelledby="cart-promo-heading">
+            <h2 id="cart-promo-heading" className="visually-hidden">
+              Промокод
+            </h2>
             <label className="cart__promo-label" htmlFor="promo-code-input">
               Промокод
             </label>
@@ -132,8 +135,11 @@ export default function CartPage() {
               </p>
             ) : null}
           </section>
-          <section aria-label="Итог по корзине">
-            <dl className="cart__totals" aria-label="Итоговые суммы корзины">
+          <section aria-labelledby="cart-totals-heading">
+            <h2 id="cart-totals-heading" className="visually-hidden">
+              Итог по корзине
+            </h2>
+            <dl className="cart__totals">
               <div className="cart__total cart__total--before">
                 <dt>Сумма до скидки:</dt>
                 <dd>
@@ -148,7 +154,10 @@ export default function CartPage() {
               </div>
             </dl>
           </section>
-          <section className="cart__actions" aria-label="Действия с корзиной">
+          <section className="cart__actions" aria-labelledby="cart-actions-heading">
+            <h2 id="cart-actions-heading" className="visually-hidden">
+              Действия с корзиной
+            </h2>
             <button type="button" className="cart__btn cart__btn--secondary" onClick={handleClearCart}>
               Очистить корзину
             </button>

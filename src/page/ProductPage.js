@@ -39,7 +39,7 @@ export default function ProductPage() {
               </Link>
             </li>
             <li className="product-page__breadcrumb-item visually-hidden" aria-current="page">
-              <span className="product-page__breadcrumb" aria-label={`Текущая страница: ${title}`}>
+              <span className="product-page__breadcrumb">
                 {title}
               </span>
             </li>
@@ -54,8 +54,10 @@ export default function ProductPage() {
             />
             <figcaption className="visually-hidden">Изображение товара: {title}</figcaption>
           </figure>
-          <section className="product-page__info" aria-label="Описание товара">
-            <h1 className="product-page__title">{title}</h1>
+          <section className="product-page__info" aria-labelledby="product-page-title">
+            <h1 id="product-page-title" className="product-page__title">
+              {title}
+            </h1>
             <p className="product-page__description">{description}</p>
             <p className="product-page__price">{formatPrice(price)}</p>
             <AddCartButton product={product} className="product-page__btn" />
